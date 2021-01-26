@@ -1,0 +1,28 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "nome": "Angular"
+    },
+    {
+      "id": 2,
+      "nome": "Springboot"
+    },
+    {
+      "id": 3,
+      "nome": "Kotlin"
+    },
+    {
+      "id": 4,
+      "nome": "MongoDB"
+    },
+    {
+      "id": 5,
+      "nome": "Arquitetura de Software"
+    },
+    {
+      "nome": "Typescript",
+      "id": 6
+    }
+  ]
+}
