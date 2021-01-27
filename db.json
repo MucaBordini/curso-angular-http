@@ -35,6 +35,10 @@
     {
       "nome": "React-native",
       "id": 9
+    },
+    {
+      "id": 10,
+      "nome": "Pascal"
     }
   ]
 }

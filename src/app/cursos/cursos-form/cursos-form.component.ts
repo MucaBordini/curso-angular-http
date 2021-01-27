@@ -25,30 +25,19 @@ export class CursosFormComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.params
-    .pipe(
-      map((params: any) => params['id']),
-      switchMap( id => this.cursoService.loadById(id))
-    )
-    .subscribe(curso => this.updateForm(curso))
+
+    const curso = this.route.snapshot.data['curso']
 
     this.form = this.fb.group({
-      id: [null],
+      id: [curso.id],
       nome: [
-        null,
+        curso.nome,
         [
           Validators.required,
           Validators.minLength(3),
           Validators.maxLength(250),
         ],
       ],
-    });
-  }
-
-  updateForm(curso) {
-    this.form.patchValue({
-      id: curso.id,
-      nome: curso.nome
     });
   }
 
