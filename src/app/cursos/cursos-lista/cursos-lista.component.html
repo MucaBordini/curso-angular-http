@@ -37,15 +37,6 @@
     </table>
 
     <ng-template #loading>
-      <div *ngIf="error$ | async; else loadingNoError">
-        <div class="alert alert-danger" role="alert">
-          Erro ao carregar cursos!
-        </div>
-      </div>
-
-    </ng-template>
-
-    <ng-template #loadingNoError>
       <div class="d-flex justify-content-center">
         <div class="spinner-grow text-primary" role="status">
           <span class="sr-only">Loading...</span>
