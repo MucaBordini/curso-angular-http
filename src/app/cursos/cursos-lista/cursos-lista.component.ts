@@ -7,32 +7,35 @@ import { empty, Observable, Subject } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { AlertModalService } from 'src/app/shared/alert-modal.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cursos-lista',
   templateUrl: './cursos-lista.component.html',
   styleUrls: ['./cursos-lista.component.css'],
-  preserveWhitespaces: true
+  preserveWhitespaces: true,
 })
 export class CursosListaComponent implements OnInit {
-
   cursos$: Observable<Curso[]>;
   error$ = new Subject<boolean>();
 
-  constructor(private service: CursosService, private alertService: AlertModalService) { }
+  constructor(
+    private service: CursosService,
+    private alertService: AlertModalService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     //this.service.list()
     //.subscribe(dados => this.cursos = dados);
 
     this.onRefresh();
-
   }
 
-  onRefresh(){
-    this.cursos$ = this.service.list()
-    .pipe(
-      catchError(error => {
+  onRefresh() {
+    this.cursos$ = this.service.list().pipe(
+      catchError((error) => {
         console.error(error);
         //this.error$.next(true);
         this.handleError();
@@ -46,8 +49,11 @@ export class CursosListaComponent implements OnInit {
     // );
   }
 
-  handleError(){
+  handleError() {
     this.alertService.showAlertDanger('Erro ao carregar os cursos!');
   }
 
+  onEdit(id) {
+    this.router.navigate(['editar', id], { relativeTo: this.route });
+  }
 }
