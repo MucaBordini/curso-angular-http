@@ -29,8 +29,8 @@
       "id": 7
     },
     {
-      "nome": "Vue",
-      "id": 8
+      "id": 8,
+      "nome": "Vue.js"
     },
     {
       "nome": "React-native",
@@ -39,6 +39,14 @@
     {
       "id": 10,
       "nome": "Pascal"
+    },
+    {
+      "id": 11,
+      "nome": "Bootstrap"
+    },
+    {
+      "id": 12,
+      "nome": "Delphi 6"
     }
   ]
 }
