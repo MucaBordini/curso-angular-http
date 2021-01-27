@@ -23,6 +23,18 @@
     {
       "nome": "Typescript",
       "id": 6
+    },
+    {
+      "nome": "CSharp",
+      "id": 7
+    },
+    {
+      "nome": "Vue",
+      "id": 8
+    },
+    {
+      "nome": "React-native",
+      "id": 9
     }
   ]
 }
