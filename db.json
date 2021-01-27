@@ -25,10 +25,6 @@
       "id": 6
     },
     {
-      "nome": "CSharp",
-      "id": 7
-    },
-    {
       "id": 8,
       "nome": "Vue.js"
     },
@@ -37,16 +33,8 @@
       "id": 9
     },
     {
-      "id": 10,
-      "nome": "Pascal"
-    },
-    {
       "id": 11,
       "nome": "Bootstrap"
-    },
-    {
-      "id": 12,
-      "nome": "Delphi 6"
     }
   ]
 }
