@@ -4,5 +4,8 @@
     <label class="custom-file-label" for="customFile" id="customFileLabel">Selecionar arquivo</label>
   </div>
 </div>
+<div style="margin-top: 15px;">
+  <button type="submit" class="btn btn-primary" (click)="onUpload()" [disabled]="!files">Salvar</button>
+</div>
 
 
