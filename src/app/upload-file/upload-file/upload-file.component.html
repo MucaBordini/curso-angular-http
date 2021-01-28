@@ -1,11 +1,37 @@
-<div style="margin-top: 15px;">
+<div style="margin-top: 15px">
   <div class="custom-file">
-    <input type="file" class="custom-file-input" id="customFile" (change)="onChange($event)" multiple>
-    <label class="custom-file-label" for="customFile" id="customFileLabel">Selecionar arquivo</label>
+    <input
+      type="file"
+      class="custom-file-input"
+      id="customFile"
+      (change)="onChange($event)"
+      multiple
+    />
+    <label class="custom-file-label" for="customFile" id="customFileLabel"
+      >Selecionar arquivo</label
+    >
+  </div>
+  <br /><br />
+  <div class="progress">
+    <div
+      class="progress-bar"
+      role="progressbar"
+      [style.width]="progresso + '%'"
+      aria-valuenow="0"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      {{ progresso }}%
+    </div>
   </div>
 </div>
-<div style="margin-top: 15px;">
-  <button type="submit" class="btn btn-primary" (click)="onUpload()" [disabled]="!files">Salvar</button>
+<div style="margin-top: 15px">
+  <button
+    type="submit"
+    class="btn btn-primary"
+    (click)="onUpload()"
+    [disabled]="!files"
+  >
+    Salvar
+  </button>
 </div>
-
-
